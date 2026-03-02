@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "json-server --watch src/assets/jobs.json --port 5000"
+    "server": "node backend/server.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "axios": "^1.13.5",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
     "json-server": "^1.0.0-beta.5",
+    "mongoose": "^9.2.3",
     "primeicons": "^7.0.0",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.27",
