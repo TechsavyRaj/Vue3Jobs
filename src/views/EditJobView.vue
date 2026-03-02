@@ -32,7 +32,7 @@ const formData = reactive({
 const toast = useToast();
 const handleSubmit = async () => {
   try {
-    const response = await axios.put(`/api/jobs/${jobId}`, formData);
+    const response = await api.put(`/api/jobs/${jobId}`, formData);
     toast.success("Job updated successfully.");
     await router.push(`/jobs/show/${response.data.id}`);
   } catch (error) {
@@ -43,7 +43,7 @@ const handleSubmit = async () => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`/api/jobs/${jobId}`);
+    const response = await api.get(`/api/jobs/${jobId}`);
     state.job = response.data;
     formData.title = state.job.title;
     formData.type = state.job.type;
